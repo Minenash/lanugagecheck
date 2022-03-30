@@ -11,11 +11,11 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+	maven {
+		name = "CottonMC"
+		url = "https://server.bbkr.space/artifactory/libs-release"
+	}
+	maven {url = "https://maven.auoeke.net"}
 }
 
 dependencies {
@@ -26,6 +26,47 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation include("io.github.cottonmc:LibGui:5.3.2+1.18.2")
+
+	include implementation("net.auoeke:reflect:4.+")
+	include implementation("net.gudenau.lib:unsafe:1.7.1")
+
+//	implementation "org.languagetool:language-all:5.6"
+	implementation "org.languagetool:languagetool-core:5.6"
+//	include "org.languagetool:french-pos-dict:0.4"
+//	include "org.languagetool:language-all:5.6"
+//	include "org.languagetool:language-ar:5.6"
+//	include "org.languagetool:language-ast:5.6"
+//	include "org.languagetool:language-be:5.6"
+//	include "org.languagetool:language-br:5.6"
+//	include "org.languagetool:language-ca:5.6"
+//	include "org.languagetool:language-da:5.6"
+//	include "org.languagetool:language-de:5.6"
+//	include "org.languagetool:language-de-DE-x-simple-language:5.6"
+//	include "org.languagetool:language-el:5.6"
+//	implementation "org.languagetool:language-en:5.6"
+//	include "org.languagetool:language-eo:5.6"
+//	include "org.languagetool:language-es:5.6"
+//	include "org.languagetool:language-fa:5.6"
+//	include "org.languagetool:language-ga:5.6"
+//	include "org.languagetool:language-gl:5.6"
+//	include "org.languagetool:language-it:5.6"
+//	include "org.languagetool:language-ja:5.6"
+//	include "org.languagetool:language-km:5.6"
+//	include "org.languagetool:language-nl:5.6"
+//	include "org.languagetool:language-pl:5.6"
+//	include "org.languagetool:language-pt:5.6"
+//	include "org.languagetool:language-ro:5.6"
+//	include "org.languagetool:language-ru:5.6"
+//	include "org.languagetool:language-sk:5.6"
+//	include "org.languagetool:language-sl:5.6"
+//	include "org.languagetool:language-sv:5.6"
+//	include "org.languagetool:language-ta:5.6"
+//	include "org.languagetool:language-tl:5.6"
+//	include "org.languagetool:language-uk:5.6"
+//	include "org.languagetool:language-zh:5.6"
+	include "org.languagetool:languagetool-core:5.6"
+
 }
 
 processResources {
