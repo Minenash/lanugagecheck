@@ -9,10 +9,11 @@
     "defaultRequire": 1
   },
   "mixins": [
+    "ScreenDrawingMixin",
     "TextFieldWidgetAccessor",
     "TitleScreenMixin",
-    "ScreenDrawingMixin",
-    "WTabPanelMixin",
-    "WTabPanelTabMixin"
+    "libgui.WScrollPanelMixin",
+    "libgui.WTabPanelMixin",
+    "libgui.WTabPanelTabMixin"
   ]
 }

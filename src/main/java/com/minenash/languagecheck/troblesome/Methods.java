@@ -1,9 +1,5 @@
 package com.minenash.languagecheck.troblesome;
 
-import net.auoeke.reflect.Flags;
-import net.auoeke.reflect.Invoker;
-import net.auoeke.reflect.Reflect;
-
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Method;

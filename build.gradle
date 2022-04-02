@@ -28,8 +28,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation include("io.github.cottonmc:LibGui:5.3.2+1.18.2")
 
-	include implementation("net.auoeke:reflect:4.+")
-	include implementation("net.gudenau.lib:unsafe:1.7.1")
+//	include implementation("net.auoeke:reflect:4.+")
+	implementation("net.gudenau.lib:unsafe:1.7.1")
 
 //	implementation "org.languagetool:language-all:5.6"
 	implementation "org.languagetool:languagetool-core:5.6"
@@ -44,7 +44,7 @@ dependencies {
 //	include "org.languagetool:language-de:5.6"
 //	include "org.languagetool:language-de-DE-x-simple-language:5.6"
 //	include "org.languagetool:language-el:5.6"
-//	implementation "org.languagetool:language-en:5.6"
+//	include "org.languagetool:language-en:5.6"
 //	include "org.languagetool:language-eo:5.6"
 //	include "org.languagetool:language-es:5.6"
 //	include "org.languagetool:language-fa:5.6"

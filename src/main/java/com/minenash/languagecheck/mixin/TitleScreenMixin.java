@@ -1,7 +1,7 @@
 package com.minenash.languagecheck.mixin;
 
 import com.minenash.languagecheck.gui.language_options_screen.LanguageOptionsScreen;
-import com.minenash.languagecheck.gui.language_options_screen.LanguageOptionsScreenDefinition;
+import com.minenash.languagecheck.gui.language_options_screen.LanguageOptionsScreenDef;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
@@ -21,7 +21,7 @@ public abstract class TitleScreenMixin extends Screen {
     public void test(CallbackInfo info) {
 
         addDrawableChild(new ButtonWidget(this.width / 2 + 104, this.height / 4 + 48, 20, 20, new LiteralText("L"),
-                button -> client.setScreen(new LanguageOptionsScreen(new LanguageOptionsScreenDefinition()))));
+                button -> client.setScreen(new LanguageOptionsScreen(new LanguageOptionsScreenDef()))));
 
     }
 

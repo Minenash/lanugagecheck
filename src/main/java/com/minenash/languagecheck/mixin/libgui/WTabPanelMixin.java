@@ -1,4 +1,4 @@
-package com.minenash.languagecheck.mixin;
+package com.minenash.languagecheck.mixin.libgui;
 
 import io.github.cottonmc.cotton.gui.widget.WTabPanel;
 import org.spongepowered.asm.mixin.Mixin;
