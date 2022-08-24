@@ -22,7 +22,6 @@ public class LanguageCheck implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-
 		try {
 			Files.createDirectories(CONFIG_PATH.resolve("ngram"));
 		}
@@ -39,15 +38,7 @@ public class LanguageCheck implements ClientModInitializer {
 		}
 
 		for (var lang : Languages.available) {
-			try {
-				Class<?> c = getClass().getClassLoader().loadClass(lang.currentVariant.path());
-				langTool = new JLanguageTool((Language)c.getConstructor().newInstance());
-				Languages.current = lang;
-				LOGGER.info("[Language Checker]: " + lang.name + (lang.currentVariant.name() == null ? "" : " (" + lang.currentVariant.code() + ")") + " is active");
-				break;
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			lang.loadLangTool();
 		}
 
 	}
@@ -60,15 +51,9 @@ public class LanguageCheck implements ClientModInitializer {
 		if (lang == null) {
 			langTool = null;
 			Languages.current = null;
-		}
-		try {
-			Class<?> c = LanguageCheck.class.getClassLoader().loadClass(lang.currentVariant.path());
-			langTool = new JLanguageTool((Language)c.getConstructor().newInstance());
-			Languages.current = lang;
-			LOGGER.info("[Language Checker]: " + lang.name + (lang.currentVariant.name() == null ? "" : " (" + lang.currentVariant.code() + ")") + " is active");
-		}
-		catch (Exception e) {
-			LOGGER.info("[Language Checker]: " + lang.name + " failed to load");
+			System.out.println("we fucked shit");
+		} else {
+			lang.loadLangTool();
 		}
 	}
 

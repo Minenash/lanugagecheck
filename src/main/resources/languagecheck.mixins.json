@@ -4,6 +4,7 @@
   "package": "com.minenash.languagecheck.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
+    "ChatScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
