@@ -49,7 +49,7 @@ dependencies {
 //	include "org.languagetool:language-de:5.6"
 //	include "org.languagetool:language-de-DE-x-simple-language:5.6"
 //	include "org.languagetool:language-el:5.6"
-//	include "org.languagetool:language-en:5.6"
+	implementation "org.languagetool:language-en:5.6"
 //	include "org.languagetool:language-eo:5.6"
 //	include "org.languagetool:language-es:5.6"
 //	include "org.languagetool:language-fa:5.6"
