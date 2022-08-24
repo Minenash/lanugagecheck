@@ -24,53 +24,18 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation include("io.github.cottonmc:LibGui:5.3.2+1.18.2")
 
-//	include implementation("net.auoeke:reflect:4.+")
+	implementation (include("org.languagetool:languagetool-core:5.6"))
+	implementation (include("org.apache.opennlp:opennlp-tools:1.9.4"))
+	implementation (include("org.apache.opennlp:opennlp:1.9.4"))
+	implementation (include('edu.washington.cs.knowitall:opennlp-tokenize-models:1.5'))
+	implementation (include('edu.washington.cs.knowitall:opennlp-postag-models:1.5'))
+	implementation (include('edu.washington.cs.knowitall:opennlp-chunk-models:1.5'))
 
-	implementation "org.apache.opennlp:opennlp-tools:1.9.4"
-	implementation "org.apache.opennlp:opennlp:1.9.4"
-	implementation 'edu.washington.cs.knowitall:opennlp-tokenize-models:1.5'
-	implementation 'edu.washington.cs.knowitall:opennlp-postag-models:1.5'
-	implementation 'edu.washington.cs.knowitall:opennlp-chunk-models:1.5'
-//	implementation "org.languagetool:language-all:5.6"
-	implementation "org.languagetool:languagetool-core:5.6"
-
-//	include "org.languagetool:french-pos-dict:0.4"
-//	include "org.languagetool:language-all:5.6"
-//	include "org.languagetool:language-ar:5.6"
-//	include "org.languagetool:language-ast:5.6"
-//	include "org.languagetool:language-be:5.6"
-//	include "org.languagetool:language-br:5.6"
-//	include "org.languagetool:language-ca:5.6"
-//	include "org.languagetool:language-da:5.6"
-//	include "org.languagetool:language-de:5.6"
-//	include "org.languagetool:language-de-DE-x-simple-language:5.6"
-//	include "org.languagetool:language-el:5.6"
 	implementation "org.languagetool:language-en:5.6"
-//	include "org.languagetool:language-eo:5.6"
-//	include "org.languagetool:language-es:5.6"
-//	include "org.languagetool:language-fa:5.6"
-//	include "org.languagetool:language-ga:5.6"
-//	include "org.languagetool:language-gl:5.6"
-//	include "org.languagetool:language-it:5.6"
-//	include "org.languagetool:language-ja:5.6"
-//	include "org.languagetool:language-km:5.6"
-//	include "org.languagetool:language-nl:5.6"
-//	include "org.languagetool:language-pl:5.6"
-//	include "org.languagetool:language-pt:5.6"
-//	include "org.languagetool:language-ro:5.6"
-//	include "org.languagetool:language-ru:5.6"
-//	include "org.languagetool:language-sk:5.6"
-//	include "org.languagetool:language-sl:5.6"
-//	include "org.languagetool:language-sv:5.6"
-//	include "org.languagetool:language-ta:5.6"
-//	include "org.languagetool:language-tl:5.6"
-//	include "org.languagetool:language-uk:5.6"
-//	include "org.languagetool:language-zh:5.6"
-	include "org.languagetool:languagetool-core:5.6"
+//	implementation "org.languagetool:language-all:5.6"
 
 }
 
